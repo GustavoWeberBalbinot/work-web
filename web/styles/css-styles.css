@@ -46,21 +46,21 @@ body{
     color: white;
 }
 
+@media (min-width: 800px){
+    .quadrado:hover{
+        width: 600px;
+        height: 90px;
+        padding: 10px 20px;
+        transition: width 0.6s, height 0.6s;
+    }
 
-.quadrado:hover{
-    width: 600px;
-    height: 90px;
-    padding: 10px 20px;
-    transition: width 0.6s, height 0.6s;
+    .quadrado:not(:hover){
+        width: 35%;
+        height: 70px;
+        padding: 10px 20px;
+        transition: width 0.6s, height 0.6s;
+    }
 }
-
-.quadrado:not(:hover){
-    width: 35%;
-    height: 70px;
-    padding: 10px 20px;
-    transition: width 0.6s, height 0.6s;
-}
-
 .pe {
     background-color: white; 
     color: black;
@@ -77,23 +77,49 @@ body{
     width: 55px;
 }
 
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
 .caixa {
-    width: 15px;
-    padding: 15px;
+    width: 20%;
+    padding: 2%;
     text-align: center;
     margin: 10px;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
+.icons_contact{
+    width: 75px;
+    height: 75px;
+}
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        width: 35%;
-        margin: 0% 31%;
+@media (max-width:600px){
+    .caixa{
+        width: 25%;
+        margin: 5%;
     }
-
     .icons_contact{
         width: 75px;
     }
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+}
 
+@media (min-width: 601px) and (max-width: 900px) {
+    .caixa {
+        width: 15%;
+    }  
+}
